@@ -1,0 +1,20 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
+
+
+function LanguageSwitcher() {
+  const { i18n } = useTranslation();
+
+  function changeLanguage(lang) {
+    i18n.changeLanguage(lang);
+  }
+
+  return (
+    <div>
+      <button onClick={() => changeLanguage("en")}>English</button>
+      <button onClick={() => changeLanguage("gu")}>ગુજરાતી</button>
+    </div>
+  );
+}
+
+export default LanguageSwitcher;
